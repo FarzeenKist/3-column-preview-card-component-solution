@@ -245,4 +245,7 @@ img {
   .padding-5 {
     padding: 8em 5em;
   }
+  .info-btn {
+    margin: 3rem 0;
+  }
 }
