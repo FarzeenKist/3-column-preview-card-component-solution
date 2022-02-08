@@ -1,0 +1,248 @@
+/* ------------------- */
+/* Custom Properties   */
+/* ------------------- */
+
+:root {
+  /* colors */
+  --clr-bright-orange: 31 77% 52%;
+  --clr-dark-cyan: 184 100% 22%;
+  --clr-darker-cyan: 179 100% 13%;
+  --clr-white: 0 0% 100%;
+  --clr-light-gray: 0 0% 95%;
+  /* font size */
+  --fs-800: 3.3rem;
+  --fs-700: 1.4rem;
+  /* font weight */
+  --fw-bold: 700;
+  --fw-regular: 400;
+  /* font-families */
+  --ff-bigShoulderDisplay: "Big Shoulders Display", cursive;
+  --ff-lexendDeca: "Lexend Deca", sans-serif;
+}
+
+/* ------------------- */
+/* Reset               */
+/* ------------------- */
+
+/* https://piccalil.li/blog/a-modern-css-reset/ */
+
+/* Reset font sizing */
+
+html {
+  font-size: 62.5%;
+}
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+div,
+h1,
+img,
+p {
+  margin: 0;
+}
+
+/* set up the body */
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* remove animations for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===================== */
+/*   Utility classes    */
+/* ==================== */
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  max-width: 38rem;
+  width: 93%;
+}
+
+/* Text colors */
+
+.text-transparent {
+  color: hsla(var(--clr-white) / 0.75);
+}
+.text-light-gray {
+  color: hsl(var(--clr-light-gray));
+}
+
+/* Text colors for button */
+
+.text-orange {
+  color: hsl(var(--clr-bright-orange));
+}
+
+.text-dark-cyan {
+  color: hsl(var(--clr-dark-cyan));
+}
+
+.text-darker-cyan {
+  color: hsl(var(--clr-darker-cyan));
+}
+
+/* Big Shoulder display */
+.ff-bsd {
+  font-family: var(--ff-bigShoulderDisplay);
+}
+
+.ff-lexendDeca {
+  font-family: var(--ff-lexendDeca);
+}
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 1.5px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 0.2px;
+}
+.text-align {
+  text-align: center;
+}
+.line-height {
+  line-height: 1.2;
+}
+/* Background */
+
+.bg-orange {
+  background-color: hsl(var(--clr-bright-orange));
+}
+.bg-dark-cyan {
+  background-color: hsl(var(--clr-dark-cyan));
+}
+.bg-darker-cyan {
+  background-color: hsl(var(--clr-darker-cyan));
+}
+.bg-light-gray {
+  background-color: hsl(var(--clr-light-gray));
+}
+
+/* Spacing */
+
+.margin-up-down-6 {
+  margin: 6rem 0;
+}
+
+.margin-up-down-4 {
+  margin: 4rem 0;
+}
+
+.margin-up-down-1 {
+  margin: 1rem 0;
+}
+
+.padding-5 {
+  padding: 4.7em 5em;
+}
+
+.padding-2 {
+  padding: 1em 2em;
+}
+.padding-bot {
+  padding-bottom: 1em;
+}
+
+/* Border-shaping */
+
+.border-top {
+  border-radius: 1.2rem 1.2rem 0 0;
+}
+.border-bottom {
+  border-radius: 0 0 1.2rem 1.2rem;
+}
+
+.border-btn {
+  border-radius: 2rem;
+}
+
+/* ==================== */
+/*     Components       */
+/* ==================== */
+
+.info-btn {
+  border: 1px solid hsla(var(--clr-white) / 0.75);
+  border-radius: 2.5rem;
+  text-decoration: none;
+  transition: all 500ms ease-in-out;
+}
+
+.info-btn:hover,
+.info-btn:focus {
+  border-width: 2.5px;
+  cursor: pointer;
+  color: hsla(var(--clr-white) / 0.75);
+  background-color: inherit;
+}
+
+@media screen and (min-width: 1280px) {
+  .flex {
+    flex-direction: row;
+  }
+  .margin-up-down-6 {
+    margin: 0;
+  }
+  .container {
+    width: 100%;
+  }
+  .border-top {
+    border-radius: 1.2rem 0 0 1.2rem;
+  }
+  .border-bottom {
+    border-radius: 0 1.2rem 1.2rem 0;
+  }
+  .padding-5 {
+    padding: 8em 5em;
+  }
+}
